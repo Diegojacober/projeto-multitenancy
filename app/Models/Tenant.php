@@ -10,7 +10,8 @@ class Tenant extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name'
+        'name',
+        'uuid'
     ];
 
     public function users()

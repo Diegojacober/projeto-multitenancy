@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('tenants', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            $table->string('photo');
+            $table->string('photo')->default('padrao.png');
+            $table->uuid('uuid');
             $table->timestamps();
         });
     }
